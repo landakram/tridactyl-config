@@ -1,0 +1,26 @@
+bind J tabprev
+bind K tabnext
+
+unbind d
+bind x tabclose
+
+unbind u
+bind U undo
+
+bind j scrollline 5
+bind k scrollline -5
+
+bind d scrollpage 0.5
+bind u scrollpage -0.5
+
+bind i mode ignore
+
+bind --mode=ignore <Escape> mode normal
+
+bindurl mail.google.com --mode=ignore : fillcmdline_notrail
+bindurl mail.google.com --mode=ignore t fillcmdline tabopen
+bindurl mail.google.com --mode=ignore x tabclose
+bindurl mail.google.com --mode=ignore J tabprev
+bindurl mail.google.com --mode=ignore K tabnext
+bindurl mail.google.com --mode=ignore b fillcmdline tab
+bindurl mail.google.com --mode=ignore B fillcmdline taball
