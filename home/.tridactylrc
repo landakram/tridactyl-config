@@ -1,8 +1,13 @@
+" Don't cache config
+sanitise tridactyllocal tridactylsync
+
+set theme dark
+
 bind J tabprev
 bind K tabnext
 
 unbind d
-bind x tabclose
+bind --mode=normal x tabclose
 
 unbind u
 bind U undo
@@ -17,10 +22,34 @@ bind i mode ignore
 
 bind --mode=ignore <Escape> mode normal
 
-bindurl mail.google.com --mode=ignore : fillcmdline_notrail
-bindurl mail.google.com --mode=ignore t fillcmdline tabopen
-bindurl mail.google.com --mode=ignore x tabclose
-bindurl mail.google.com --mode=ignore J tabprev
-bindurl mail.google.com --mode=ignore K tabnext
-bindurl mail.google.com --mode=ignore b fillcmdline tab
-bindurl mail.google.com --mode=ignore B fillcmdline taball
+set hintfiltermode vimperator-reflow
+
+" Google search
+
+" Only hint result links, top-level nav, next/prev, and input
+bindurl www.google.com f hint -Jc .rc > .r > a, .q, .pn, input
+bindurl www.google.com F hint -Jc .rc > .r > a, .q, .pn, input
+
+" Gmail
+
+unbindurl https://mail.google.com .
+unbindurl https://mail.google.com a
+unbindurl https://mail.google.com f
+unbindurl https://mail.google.com j
+unbindurl https://mail.google.com k
+unbindurl https://mail.google.com o
+unbindurl https://mail.google.com s
+unbindurl https://mail.google.com x
+unbindurl https://mail.google.com u
+unbindurl https://mail.google.com U
+
+unbindurl https://mail.google.com e
+unbindurl https://mail.google.com y
+unbindurl https://mail.google.com r
+unbindurl https://mail.google.com a
+unbindurl https://mail.google.com c
+unbindurl https://mail.google.com /
+
+" System
+
+bind ;s source
