@@ -28,7 +28,7 @@ set hintfiltermode vimperator-reflow
 
 " Only hint result links, top-level nav, next/prev, and input
 bindurl www.google.com f hint -Jc .rc > .r > a, .q, .pn, input
-bindurl www.google.com F hint -Jc .rc > .r > a, .q, .pn, input
+bindurl www.google.com F hint -Jtc .rc > .r > a, .q, .pn, input
 
 " Gmail
 
